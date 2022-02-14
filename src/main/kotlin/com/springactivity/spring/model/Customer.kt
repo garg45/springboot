@@ -12,7 +12,7 @@ data class Customer(
     var email: String,
     var gender: String,
     @OneToMany(cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
-    @JoinColumn(name = "cp_fk", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "cp_fk", referencedColumnName = "id")
     var products: MutableList<Product>
 
 )
